@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-    [SerializeField] private float _speed = 1f; //1 / ms
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float _speed = 1;
 
     void Update()
     {
