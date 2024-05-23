@@ -20,7 +20,6 @@ public class ScreenPaint : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             _currentPos = _cam.ScreenToWorldPoint(Input.mousePosition);
-            //Debug.Log($"Mouse position is {Input.mousePosition}, _currentPos is {_currentPos}");
         }
         if((_currentPos - _startPos).magnitude > _distanceToDraw)
         {
