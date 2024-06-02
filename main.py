@@ -1,5 +1,5 @@
 import argparse
-book = {"Masha": 123, "Pasha": 1234, "Natasha": 32415}
+book = {"Masha": 123, "Petya": 1234, "Natasha": 32415}
 
 parser = argparse.ArgumentParser(description="Telephone book")
 parser.add_argument("-a","--add", dest="param1")
