@@ -1,0 +1,5 @@
+2. Contours is a Python list of all the contours in the image. Each individual contour is a Numpy array of (x,y) coordinates of boundary points of the object.
+3. Проделать это самостоятельно с картинкой test.jpg
+4. 2 и третий способ идентичны (согласно документации)
+7. epsilon - максимальное расстояние от контура до аппроксимации. На картинке второе изображение - 10% epsilon, третье - 1% epsilon.
+8.
