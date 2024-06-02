@@ -1,0 +1,4 @@
+**Команды для PS для обмена данными с аппаратом**
+
+pscp -pw raspberry pi@10.3.141.1:/home/initial.png C:\murIDE\codes\initial.png;  pscp -pw raspberry pi@10.3.141.1:/home/result.png C:\murIDE\codes\result.png
+pscp pi@10.3.141.1:/home/cam.png C:\murIDE\codes\cam.png
