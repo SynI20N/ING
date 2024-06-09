@@ -1,0 +1,56 @@
+1ый слайд.
+1.
+# Импорт библиотеки OpenCV-python
+import cv2
+
+# Чтение изображения
+image = cv2.imread('path_to_image.jpg')
+
+# Отображение изображения
+cv2.imshow('Image', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+2.
+cv2.resize: изменение размера изображения.
+cv2.cvtColor: изменение цветового пространства (например, RGB в оттенки серого).
+cv2.rotate: поворот изображения.
+
+3.
+# Чтение изображения
+image = cv2.imread('path_to_image.jpg')
+
+# Преобразование в оттенки серого
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+# Применение порогового значения
+_, thresholded_image = cv2.threshold(gray_image, 127, 255, cv2.THRESH_BINARY)
+
+# Отображение результатов
+cv2.imshow('Gray Image', gray_image)
+cv2.imshow('Thresholded Image', thresholded_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+4.
+# Чтение изображения и преобразование в оттенки серого
+image = cv2.imread('path_to_image.jpg')
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+# Нахождение контуров
+contours, _ = cv2.findContours(gray_image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+# Копия изображения для отображения контуров
+contour_image = image.copy()
+
+# Рисование контуров
+cv2.drawContours(contour_image, contours, -1, (0, 255, 0), 3)
+
+# Отображение изображения с контурами
+cv2.imshow('Contours', contour_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+
+
