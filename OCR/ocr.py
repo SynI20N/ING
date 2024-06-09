@@ -30,3 +30,12 @@ matches = result==test_labels
 correct = np.count_nonzero(matches)
 accuracy = correct*100.0/result.size
 print( accuracy )
+
+# Read a new digit image (20x20), preprocess it, and predict its class
+new_digit = cv.imread('new_digit.png', cv.IMREAD_GRAYSCALE)
+new_digit_resized = cv.resize(new_digit, (20, 20))
+new_digit_flattened = new_digit_resized.reshape(-1, 400).astype(np.float32)
+
+# Predict the class of the new digit
+ret, new_result, neighbours, dist = knn.findNearest(new_digit_flattened, k=5)
+print(f"Predicted class for the new digit: {int(new_result[0][0])}")
